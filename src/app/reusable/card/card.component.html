@@ -1,10 +1,19 @@
 <div class="wrapper">
     <div class="designHolder">
-        <img src="" alt="">
+        <div class="oneDesign">
+            <div class="tshirt">
+                <img class="blank" src="assets/{{card.color}}-FRONT.png" alt="">
+                <img class="designImg" src="{{card.frontImage}}"alt="">
+            </div>
+        </div>
+        
     </div>
     <div class="info">
-        <h1 class="artist"> Artist's Name</h1>
-        <h1 class="title">Title of the design</h1>
+        <h1 class="artist">Artist's Name</h1>
+        <h1 class="title">{{card.title | uppercase}}  </h1>
         <h1 class="price"> $11.99</h1>
     </div>
+    <div class="save">
+        <img src="/assets/heart.svg" alt="">
+    </div>  
 </div>

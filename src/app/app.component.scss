@@ -31,7 +31,7 @@
     flex-direction: column;
     justify-content: space-around;
     .line{
-        transition: .25s ease-in-out;
+        transition: .1s ease-in-out;
         width: 20px;
         height: 2px;
         border: 1px solid black;
@@ -55,10 +55,12 @@
 }
 .search{ 
     transition: 0.3s ease-in-out;
-    transform: translateX(100%);
-    right:0;
+    transform: translateY(-100%);
+    left:0px;
+    top:0px;
     position: absolute;
     width:100%;
+
     background-color: white;
     .input-holder{
         margin-left:2.5%;
@@ -88,6 +90,7 @@
         //     transform: translateY(-50%);
         // }
     }
+    
     .cancel{
         position: absolute;
         right:5px;
@@ -99,7 +102,7 @@
 
 }
 .search.searchOpen{
-    transform: translateX(0%);
+    transform: translateY(15%);
 
 }
 

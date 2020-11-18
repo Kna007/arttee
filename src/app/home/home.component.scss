@@ -6,17 +6,19 @@ div{
     display: inline-block;
 }
 .customizeInfo{
+    
     width: 100%;
     margin: 0 auto;
     padding:5%;
-    height: 30vh;
     background-color: rgb(211, 252, 245);
     .imageHolder{
+        vertical-align: top;
         width: 50%;
         height: 100%;
         
     }
     .infoHolder{
+        vertical-align: top;
         width: 50%;
         height: 100%;
         h1{
@@ -51,10 +53,10 @@ div{
 .browseDesignInfo{
     margin-top: 30px;
     width:100%;
-    height: 30vh;
     background-color:rgb(249, 249, 249);
     padding: 5%;
     .infoHolder{
+        vertical-align: top;
         width: 50%;
         h1{
             text-align: center;
@@ -88,10 +90,39 @@ h1{
 }
 app-card{
     display: inline-block;
+    width: 48%;
+    margin-bottom: 10px;
 }
 .cardHolder{
     width: 100%;
     flex-wrap: wrap;
     display: flex;
     justify-content: space-between;
+}
+.question{
+    margin-top:20px;
+    margin-left: 10px;
+    h1{
+        font-family: 'Gilroy';
+        font-size: 26px;
+        margin-left: 0px;
+        margin-bottom: 0px;
+    }
+    p{
+        color:gray;
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    button{
+        padding: 10px;
+        border:none;
+        font-family: 'Gilroy-Medium';
+        color: white;
+        background-color: #00B1A4;
+        img{
+            fill:white;
+            width: 20px;
+            vertical-align: middle;
+        }
+    }
 }
