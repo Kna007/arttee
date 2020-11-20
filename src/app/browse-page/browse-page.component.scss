@@ -1,0 +1,39 @@
+.tags{
+    .tag{
+        padding: 5px 30px;
+        border-radius: 100px;
+        border: 2px #00B1A4 solid;
+        margin-left: 10px;
+        color:#00B1A4;
+        background-color: white;
+    }
+    .tag.active{
+        color: white;
+        background-color: #00B1A4;
+        border:none;
+        padding: 7px 32px;
+    }
+    position: sticky;
+    top:50px;
+    left:0;
+    min-height: 30px;
+    white-space: nowrap;
+    overflow: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.tags::-webkit-scrollbar{
+    display: none;
+}
+app-card{
+    display: inline-block;
+    width: 48%;
+    margin-bottom: 10px;
+}
+.cardHolder{
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    padding:5%;
+}

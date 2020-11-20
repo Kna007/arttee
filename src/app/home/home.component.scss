@@ -31,16 +31,16 @@ div{
             font-size: 12px;
             color:gray;
             text-align: center;
-            font-family: 'Gilroy-Medium';
+            // font-family: 'Gilroy-Medium';
         }
         .buttonHolder{
             margin-top:15px;
             display: flex;
             justify-content: center;
             button{
-                padding: 10px;
+                padding: 10px 20px;
                 color:white;
-                font-family: 'Gilroy';
+                // font-family: 'Gilroy';
                 background-color:#00B1A4;
                 border:none;
             }
@@ -68,16 +68,16 @@ div{
             color:gray;
             margin-top:20px;
             font-size:12px;
-            font-family: 'Gilroy-Medium';
+            // font-family: 'Gilroy-Medium';
         }
         .buttonHolder{
             margin-top:15px;
             display: flex;
             justify-content: center;
             button{
-                padding: 10px;
+                padding: 10px 20px;
                 color:white;
-                font-family: 'Gilroy';
+                // font-family: 'Gilroy';
                 background-color:#00B1A4;
                 border:none;
             }
@@ -103,7 +103,7 @@ app-card{
     margin-top:20px;
     margin-left: 10px;
     h1{
-        font-family: 'Gilroy';
+        // font-family: 'Gilroy';
         font-size: 26px;
         margin-left: 0px;
         margin-bottom: 0px;
@@ -116,7 +116,7 @@ app-card{
     button{
         padding: 10px;
         border:none;
-        font-family: 'Gilroy-Medium';
+        // font-family: 'Gilroy-Medium';
         color: white;
         background-color: #00B1A4;
         img{

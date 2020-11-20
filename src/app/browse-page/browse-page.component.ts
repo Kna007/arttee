@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-browse-page',
+  templateUrl: './browse-page.component.html',
+  styleUrls: ['./browse-page.component.scss']
 })
-export class HomeComponent implements OnInit {
-
-  constructor() { }
+export class BrowsePageComponent implements OnInit {
+  selectedIndex = 0;
+  tags = ["All", "Among Us", "K-pop", "Halloween", "Someee"];
   cards = [{
     title: 'Title of the design #1',
     color: 'BLACK',
@@ -41,7 +41,12 @@ export class HomeComponent implements OnInit {
     }
   },
 ]
-  ngOnInit(): void {
-  }
+  constructor() { }
 
+  ngOnInit(): void {
+    localStorage.setItem('some','thing');
+  }
+  setSelectedIndex(i){
+  this.selectedIndex = i;
+}
 }

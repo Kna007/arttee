@@ -1,0 +1,72 @@
+<div class="wrapper">
+    <div class="title">
+        <h1> YOUR BAG</h1>
+        <h4>TOTAL  10 T-SHIRTs</h4>
+        <h4>$41.99</h4>
+    </div>
+    <div class="line"></div>
+    <div class="orderItemHolder" *ngFor="let card of orders">
+        <div class="orderItem" >
+            <div class="frontPriority" *ngIf="card.type == 'frontPriority' || card.type == 'frontOnly'">
+                <div class="back">
+                    <img class="blank" src="assets/{{card.color}}-BACK.png" alt="">
+                    <img class="designImg" src="{{card.images.backImage}}" alt="">
+                </div>
+                <div class="front">
+                    <img class="blank" src="assets/{{card.color}}-FRONT.png" alt="">
+                    <img class="designImg" src="{{card.images.frontImage}}" alt="">
+                </div>
+            </div>
+            <div class="backPriority" *ngIf="card.type == 'backPriority' || card.type == 'backOnly'">
+                <div class="front">
+                    <img class="blank" src="assets/{{card.color}}-FRONT.png" alt="">
+                    <img class="designImg" src="{{card.images.frontImage}}" alt="">
+                </div>
+                <div class="back">
+                    <img class="blank" src="assets/{{card.color}}-BACK.png" alt="">
+                    <img class="designImg" src="{{card.images.backImage}}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="orderInfo">
+            <div class="titlePriceHolder">
+                <h3 class="designTitle">{{card.title | uppercase}}</h3>
+                <div class="price">$11.99</div>
+            </div>
+            <h4>Designer's Name</h4>
+            <h4 class="size">Size M</h4>
+            <div class="quantityCrossHolder">
+                <select name="quantity" id="quantity">
+                    <option *ngFor="let value of [1,2,3,4,5]" value="value">{{value}}</option>
+                </select>
+                <img src="/assets/cross.png" alt="">
+            </div>
+
+        </div>
+    </div>
+    <div class="summary">
+        <h4 class="summaryTitle">SUMMARY</h4>
+        <div class="subtotal">
+            <h4 >SUBTOTAL</h4>
+            <h4 class="subtotalAmount">39.4$</h4>
+        </div>
+        <div class="deliveryCost">
+                <h4>ESTIMATED DELIVERY</h4>
+            <h4 class="deliveryCost">1.5$</h4>
+        </div>
+        <h4 class="voucher"><img src="/assets/voucher.png" alt=""><span>APPLY A VOUCHER</span> </h4>
+        <div class="total">
+            <h4>TOTAL</h4>
+            <h4 class="totalAmount">$51.80</h4>
+        </div>
+        <button >Go to Checkout</button>
+
+    </div>
+    <div class="line"></div>
+    <div class="recommendDesignHolder">
+        <h4>YOU MIGHT ALSO LIKE</h4>
+        <div class="cardHolder">
+            <app-card *ngFor="let recommendCard of recommendCards" [card]="recommendCard"  routerLink="/view/a"></app-card>
+        </div>
+    </div>
+</div>

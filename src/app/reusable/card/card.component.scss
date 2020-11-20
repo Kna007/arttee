@@ -21,18 +21,88 @@
                 position: absolute;
             }
         }
+        .frontPriority{
+            width: 100%;
+            padding: 11% 0px;
+            .back{
+                width: 60%;
+                left:2.5%;
+                position: absolute;
+                filter: opacity(0.9);
+                .blank{
+                    width: 100%;
+                }
+                .designImg{
+                    width: 50%;
+                    top:20%;
+                    left:25%;
+                    position: absolute;
+                }
+            }
+            .front{
+                width: 70%;
+                margin-left: 20%;
+                position: relative;
+                z-index:5;
+                .blank{
+                    width: 100%;
+                    filter: drop-shadow(4px 2px 3px rgba(0,0,0,0.6));
+                }
+                .designImg{
+                    width: 50%;
+                    top:20%;
+                    left:25%;
+                    position: absolute;
+                }
+            }
+        }
+        .backPriority{
+            width: 100%;
+            padding: 11% 0px;
+            .front{
+                width: 60%;
+                left:2.5%;
+                position: absolute;
+                filter: opacity(0.9);
+                .blank{
+                    width: 100%;
+                }
+                .designImg{
+                    width: 50%;
+                    top:20%;
+                    left:25%;
+                    position: absolute;
+                }
+            }
+            .back{
+                width: 70%;
+                margin-left: 20%;
+                position: relative;
+                z-index:5;
+                .blank{
+                    width: 100%;
+                    filter: drop-shadow(4px 2px 3px rgba(0,0,0,0.6));
+                }
+                .designImg{
+                    width: 50%;
+                    top:20%;
+                    left:25%;
+                    position: absolute;
+                }
+            }
+        }
     }
     .info{
         .title{
             font-size: 14px;
-            font-family: 'Helvetica Neue';
+            font-family: 'Helvetica';
             margin: 5px 0px;
         }
         .artist{
             font-size: 11px;
             margin: 5px 0px;
             color: gray;
-            font-family: 'Gilroy-Medium';
+            // font-family: 'Gilroy-Medium';
         }
         .price{
             font-size:14px;

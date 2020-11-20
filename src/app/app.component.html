@@ -1,20 +1,15 @@
 <!-- Header -->
-<div class="header">
-  <div class="logo">
+
+<div class="header" >
+  <div class="logo" routerLink="/">
     <img src="../assets/logo07.png" alt="">
   </div>
-  <div class="search" [class.searchOpen]="searchOpen">
-    <div class="input-holder">
-      <img class="searchIcon" src="../assets/search.svg" alt="">
-        <input type="text" placeholder="Search">
-      
-      <!-- <span>GO</span> -->
-    </div>
-    <span class="cancel" (click)="searchOpen = !searchOpen">CANCEL</span>
-  </div>
   <div class="icon-holder">
-    <div class="icon" (click)="searchOpen = !searchOpen">
+    <div class="icon" (click)="openSearch()">
       <img src="../assets/search.svg" alt="">
+    </div>
+    <div class="icon" routerLink="/bag" >
+      <img src="../assets/bag.svg" alt="">
     </div>
     <div class="icon">
       <img src="../assets/heart.svg" alt="">
@@ -28,5 +23,34 @@
 
 </div>
 
-
+<div class="searchPage" [class.searchOpen]="searchOpen">
+  <div class="search" >
+    <div class="input-holder">
+      <img class="searchIcon" src="../assets/search.svg" alt="">
+        <input type="text" placeholder="Search" #search autofocus>
+      <!-- <span>GO</span> -->
+    </div>
+    <div class="cancel" (click)="searchOpen = !searchOpen">
+      <img src="/assets/cross.svg" alt="">
+    </div>
+  </div>
+  <div class="suggestion">
+    <h4>
+      Top Suggestion
+    </h4>
+    <h4 class="word">
+      Among Us
+    </h4>
+    <h4 class="word">
+      Counter strike
+    </h4>
+    <h4 class="word">
+      Among Us
+    </h4>
+  </div>
+</div>
+<div class="alert" >
+  <strong>FREE DELIVERY!</strong> on purchase more than 3 T-Shirts
+  <img src="/asset/cross.svg" alt="">
+</div>
 <router-outlet></router-outlet>

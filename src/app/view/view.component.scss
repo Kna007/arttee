@@ -1,0 +1,298 @@
+h4{
+    font-size:14px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+h5{
+    margin-bottom: 0px;
+    font-size:12px;
+}
+.mainPreview{
+    width:100%;
+    background-color: lightgray;
+    padding:2.5%;
+    .front{
+        width: 45%;
+        margin-left: 5%;
+        position: relative;
+        z-index:5;
+        .blank{
+            width: 100%;
+            filter: drop-shadow(4px 2px 3px rgba(0,0,0,0.6));
+        }
+        .designImg{
+            width: 50%;
+            top:20%;
+            left:25%;
+            position: absolute;
+        }
+    }
+    .back{
+        width: 45%;
+        margin-left:2.5%;
+        position: relative;
+        .blank{
+            width: 100%;
+            filter: drop-shadow(4px 2px 3px rgba(0,0,0,0.6));
+        }
+        .designImg{
+            width: 50%;
+            top:20%;
+            left:25%;
+            position: absolute;
+        }
+    }
+}
+
+div{
+    display: inline-block;
+}
+
+.title{
+    padding:10px 15px;
+    display:flex;
+    justify-content: space-between;
+    align-content: center;
+    font-family: 'Helvetica';
+    .artistNameDesignTitleHolder{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .artistName{
+            color:gray;
+        }
+        .designTitle{
+            text-transform: uppercase;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+    }
+    .price{
+        color:gray;
+        align-self: center;
+    }
+}   
+.colorPreviewHolder{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px; 
+}
+.colorPreview{
+    width:24%;
+    position: relative;
+    background-color: lightgray;
+    .frontPriority{
+        width: 100%;
+        padding: 5% 0px;
+        .back{
+            width: 60%;
+            left:2.5%;
+            position: absolute;
+            filter: opacity(0.9);
+            .blank{
+                width: 100%;
+            }
+            .designImg{
+                width: 50%;
+                top:20%;
+                left:25%;
+                position: absolute;
+            }
+        }
+        .front{
+            width: 70%;
+            margin-left: 20%;
+            position: relative;
+            z-index:5;
+            .blank{
+                width: 100%;
+                filter: drop-shadow(4px 2px 3px rgba(0,0,0,0.6));
+            }
+            .designImg{
+                width: 50%;
+                top:20%;
+                left:25%;
+                position: absolute;
+            }
+        }
+    }
+    .backPriority{
+        width: 100%;
+        padding: 5% 0px;
+        .front{
+            width: 60%;
+            left:2.5%;
+            position: absolute;
+            filter: opacity(0.9);
+            .blank{
+                width: 100%;
+            }
+            .designImg{
+                width: 50%;
+                top:20%;
+                left:25%;
+                position: absolute;
+            }
+        }
+        .back{
+            width: 70%;
+            margin-left: 20%;
+            position: relative;
+            z-index:5;
+            .blank{
+                width: 100%;
+                filter: drop-shadow(4px 2px 3px rgba(0,0,0,0.6));
+            }
+            .designImg{
+                width: 50%;
+                top:20%;
+                left:25%;
+                position: absolute;
+            }
+        }
+    }
+}
+.colorPreview.active{
+    border: 2px solid #00B1A4;
+}
+.sizeOptionTitleHolder{
+    margin-top: 10px;
+    width: 100%;
+    .titleSizeGuideHolder{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        width: 100%;
+        .titleSize{
+            color:gray;
+            font-weight: 300;
+        }
+        .sizeGuide{
+            color:  #00B1A4;
+
+        }
+    
+    }
+    .sizeOptionHolder{
+        margin-top: 5px;
+        display:flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .sizeOption{
+            border: 1px solid lightgray;
+            width: 23%;
+            text-align: center;
+            padding: 5px 0px;
+            span{
+                vertical-align: middle;
+            }
+        }
+        .sizeOption.active{
+            padding: 3px 0px;
+            border: 2px solid #00B1A4;
+
+        }
+    }
+}
+
+.wrapper{
+    width: 95%;
+    margin: 0 2.5%;
+}
+.cta{
+    width: 100%;
+    border-radius: 100px;
+    font-size: 14px;
+    padding: 10px 10px;
+}
+.addToBag{
+    background-color:#00B1A4 ;
+    border: none;
+    color: white;
+}
+.ctaHolder{
+    width: 100%;
+    margin: 20px 0px;
+}
+.favourite{
+    margin-top: 10px;
+    background-color: white;
+    border: 1px solid gray;
+    img{
+        height: 14px;
+        vertical-align: middle;
+    }
+}
+.descriptionHolder{
+    p{
+        padding-top:5px;
+        font-size: 12px;
+    }
+}
+
+.designerInfoHolder{
+    margin-top: 10px;
+    .designerImageInfoHolder{
+        margin-top:20px;
+        display:flex;
+        justify-content: space-around;
+        .imageHolder{
+            width:20%;
+            img{
+                width:100%;
+                object-fit: cover;
+                border-radius: 100%;
+            }
+        }
+        .designerInformation{
+            width:70%;
+            display:flex;
+            flex-direction: column;
+            .designerNameButtonHolder{
+                display:flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                .designerName{
+                    h5{
+                        font-weight: normal;
+                        color:gray;
+                    }
+                }
+                .followButton{
+                    font-size:11px;
+                    font-weight: bold;
+                    color:white;
+                    background-color: #00B1A4;
+                    padding: 3px 20px;
+                    border-radius: 100px;
+                    border: none;
+                    
+                }
+            }
+            p{
+                padding-top:20px;
+                font-size:12px;
+
+            }
+        }
+    }
+}
+
+.recommendDesignHolder{
+    margin-top:10px;
+    width: 100%;
+    h4{
+        margin-bottom: 10px;
+    }
+    .cardHolder{    
+        overflow: scroll;
+        white-space: nowrap;
+        width:100%;
+    }
+}
+app-card{
+    margin-right: 10px;
+    display: inline-block;
+    width:210px;
+}

@@ -1,0 +1,183 @@
+h1{
+    color:#00B1A4;
+    margin-bottom: 5px;
+}
+h4{
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.title{
+    margin: 20px 0px;
+    font-size:14px;
+}
+.wrapper{
+    width:95%;
+    margin: 0 auto;
+    .orderItemHolder{
+        border-bottom: lightgray 1px solid;
+        padding: 20px 0px;
+        display:flex;
+        justify-content: space-between;
+        .orderInfo{
+            width:60%;
+            .titlePriceHolder{
+                width: 100%;
+                display:flex;
+                justify-content: space-between;
+                h3{
+                    font-size: 14px;
+                }
+                .price{
+                    margin-left:6px;
+                }
+            }
+            .size{
+                margin:10px 0px;
+            }
+            .quantityCrossHolder{
+                display: flex;
+                justify-content: space-between;
+                img{
+                    width:15px;
+                    height: 15px;
+                }
+            }
+        }
+    }
+    .orderItem{
+        width:35%;
+        position: relative;
+        background-color: lightgray;
+        .frontPriority{
+            width: 100%;
+            padding: 5% 0px;
+            .back{
+                width: 60%;
+                left:2.5%;
+                position: absolute;
+                filter: opacity(0.9);
+                .blank{
+                    width: 100%;
+                }
+                .designImg{
+                    width: 50%;
+                    top:20%;
+                    left:25%;
+                    position: absolute;
+                }
+            }
+            .front{
+                width: 70%;
+                margin-left: 20%;
+                position: relative;
+                z-index:5;
+                .blank{
+                    width: 100%;
+                    filter: drop-shadow(4px 2px 3px rgba(0,0,0,0.6));
+                }
+                .designImg{
+                    width: 50%;
+                    top:20%;
+                    left:25%;
+                    position: absolute;
+                }
+            }
+        }
+        .backPriority{
+            width: 100%;
+            padding: 5% 0px;
+            .front{
+                width: 60%;
+                left:2.5%;
+                position: absolute;
+                filter: opacity(0.9);
+                .blank{
+                    width: 100%;
+                }
+                .designImg{
+                    width: 50%;
+                    top:20%;
+                    left:25%;
+                    position: absolute;
+                }
+            }
+            .back{
+                width: 70%;
+                margin-left: 20%;
+                position: relative;
+                z-index:5;
+                .blank{
+                    width: 100%;
+                    filter: drop-shadow(4px 2px 3px rgba(0,0,0,0.6));
+                }
+                .designImg{
+                    width: 50%;
+                    top:20%;
+                    left:25%;
+                    position: absolute;
+                }
+            }
+        }
+    }
+    .summary{
+        .summaryTitle{
+            margin: 10px 0px;
+            font-size: 16px;
+        }
+        .subtotal{
+            display:flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        .deliveryCost{
+            display:flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .voucher{
+            color:#00B1A4;
+            font-weight: bold;
+            span{
+                margin-left: 5px;
+                vertical-align: top;
+            }
+            margin-bottom:10px;
+        }
+        .total{
+            display:flex;
+            justify-content: space-between;
+            h4{
+                font-weight: bold;
+            }
+            margin-bottom: 20px;
+        }
+        button{
+            border:none;
+            width:100%;
+            padding: 10px 0px;
+            background-color: #00B1A4;
+            color: white;
+            border-radius: 100px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    }
+}
+.recommendDesignHolder{
+    margin-top:20px;
+    width: 100%;
+    h4{
+        margin-bottom: 10px;
+    }
+    .cardHolder{    
+        overflow: scroll;
+        white-space: nowrap;
+        width:100%;
+    }
+}
+app-card{
+    margin-right: 10px;
+    display: inline-block;
+    width:210px;
+}

@@ -10,7 +10,7 @@
 Starting from only 9.45$  
             </p>
             <div class="buttonHolder">
-                <button> Customize Now </button>
+                <button > Customize Now </button>
             </div>
         </div>
     </div>
@@ -19,7 +19,7 @@ Starting from only 9.45$
             <h1> 1000+ DESIGNS</h1>
             <p> Thousands of beautiful designs to choose from. Starting from only 9.45$</p>
             <div class="buttonHolder">
-                <button> Browse Now </button>
+                <button routerLink="/browse"> Browse Now </button>
             </div>
         </div>
         <div class="imageHolder">
@@ -28,10 +28,7 @@ Starting from only 9.45$
     </div>
     <h1>Popular</h1>
     <div class="cardHolder">
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
+        <app-card *ngFor="let card of cards" [card]="card"  routerLink="/view/a"></app-card>
     </div>
     <div class="question">
         <h1 class="question">QUESTIONS?</h1>

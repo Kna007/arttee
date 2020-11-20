@@ -10,7 +10,7 @@
     }
     .icon-holder{
         cursor: pointer;
-        width:35%;  
+        width:45%;  
         float: right;
         display:flex;
         flex-direction: row;
@@ -53,30 +53,47 @@
     transform:rotate(-45deg);
     width: 21px;
 }
-.search{ 
-    transition: 0.3s ease-in-out;
-    transform: translateY(-100%);
+.searchPage{
     left:0px;
+    display: none;
     top:0px;
-    position: absolute;
-    width:100%;
-
+    position: fixed;
+    width:100vw;
+    z-index: 100;
+    height: 100vh;
     background-color: white;
+    .suggestion{
+        margin-top: 50px;
+        margin-left: 20px;
+        color: gray;
+        .word{
+            margin-top: 10px;
+            color: #00B1A4;
+        }
+    }
+}
+.search{ 
+   width: 100%;
+   position: relative;
+   
+   margin-top:2.5%;
     .input-holder{
         margin-left:2.5%;
         position: relative;
-        width:75%;
+        width:80%;
         input{
             width: 100%;
-            border: 1px black solid;
-            padding:5px;
-            padding-left:10px;
+            border: none;
+            padding:10px;
+            padding-left:35px;
             border-radius: 30px;
-            font-size: 20px;
+            font-size: 16px;
+            background-color: #F0f0f0;
         }
         .searchIcon{
             position: absolute;
-            right: 15px;
+            left: 15px;
+            background-color: #F0f0f0;
             height: 15px;
             top:50%;
             transform: translateY(-50%);
@@ -86,26 +103,42 @@
         //     color:rgb(10, 206, 193);
         //     position: absolute;
         //     right: 5px;
-        //     top:50%;
+        //     top:2.5%;
         //     transform: translateY(-50%);
         // }
     }
     
     .cancel{
         position: absolute;
-        right:5px;
+        right:10px;
         top:50%;
+        box-sizing: border-box;
         transform: translateY(-50%);
-        height: 20px;
+        img{
+            height: 100%;
+            width: 100%;
+        }
+        width: 40px;
+        height: 40px;
+        padding: 12px;
+        border-radius: 50%;
+        background-color: #F0f0f0;
     }
 
 
 }
-.search.searchOpen{
-    transform: translateY(15%);
+.searchPage.searchOpen{
+    display: block;
 
 }
-
+.alert{
+    width: 100%;
+    margin: 0px auto 5px auto;
+    font-size:12px;
+    text-align: center;
+    padding:10px 0px;
+    background-color: lightgray;
+}
 div{
     display: inline-block;
 }
