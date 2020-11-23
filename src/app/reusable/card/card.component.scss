@@ -43,7 +43,7 @@
                 width: 70%;
                 margin-left: 20%;
                 position: relative;
-                z-index:5;
+                z-index:1;
                 .blank{
                     width: 100%;
                     filter: drop-shadow(4px 2px 3px rgba(0,0,0,0.6));
@@ -78,7 +78,7 @@
                 width: 70%;
                 margin-left: 20%;
                 position: relative;
-                z-index:5;
+                z-index:1;
                 .blank{
                     width: 100%;
                     filter: drop-shadow(4px 2px 3px rgba(0,0,0,0.6));
@@ -93,6 +93,7 @@
         }
     }
     .info{
+        display:block;
         .title{
             font-size: 14px;
             font-family: 'Helvetica';

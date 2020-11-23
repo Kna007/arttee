@@ -8,6 +8,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 })
 export class AppComponent implements AfterViewInit{
   @ViewChild('search') search:ElementRef;
+  
   constructor(){
     
   }
@@ -17,6 +18,7 @@ export class AppComponent implements AfterViewInit{
   title = 'customer';
   open =false;
   searchOpen = false;
+  closeAlert = false;
   openSearch(){
     this.searchOpen = true;
     this.search.nativeElement.focus();

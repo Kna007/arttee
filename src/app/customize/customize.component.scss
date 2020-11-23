@@ -1,0 +1,72 @@
+.wrapper{
+    width:95%;
+    margin: 0 auto;
+    margin-top: 15%;
+    margin-left: 2.5%;
+}
+.sideDoneButtonHolder{
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+    align-items: center;
+    .sideButtonHolder{
+        width:30%;
+        display: flex;
+
+        .front, .back{
+            width:39px;
+            display:flex;
+            flex-direction: column;
+            padding:3px;
+            align-items: center;
+            margin-right:10px;
+            background-color: rgb(238, 237, 237);
+            .icon{
+                width:32px;
+                margin: 4px 0px;
+            }
+            .text{
+                font-size:10px;
+                margin: 4px 2px;
+                font-weight: bold;
+            }
+        }
+
+    }
+    .colorSelectionHolder{
+        width: 120px;
+        
+        .colorMainPicker{
+            display:flex;
+            align-items: center;
+            .colorText::after {
+                display: inline-block;
+                position: relative;
+                content: "";
+                top: -4px;
+                right: 0;
+                margin-left: 4px;
+                width: 6px;
+                height: 6px;
+                transform: rotate(45deg);
+                border-right: 2px solid rgba(0,0,0,1);
+                border-bottom: 2px solid rgba(0,0,0,1);
+              }
+        }
+        .circle{
+            width:30px;
+            height: 30px;
+            border-radius:50%;
+            background-color: white;
+            border: 1px solid lightgray
+        }
+        .colorText{
+            margin-left: 5px;
+            font-weight: bold;
+        }
+        .colorOption{
+            display: flex;
+            align-items: center;
+        }
+    }
+}

@@ -1,4 +1,4 @@
-
+<div class="wrapper">
     <div class="tags">
         <button *ngFor = "let tag of tags; let i = index" class="tag" [class.active]="selectedIndex == i" (click)="setSelectedIndex(i)">
             {{tag}}
@@ -7,4 +7,6 @@
     <div class="cardHolder">
         <app-card *ngFor="let card of cards" [card]="card"  routerLink="/view/a"></app-card>
     </div>
+
+</div>
 

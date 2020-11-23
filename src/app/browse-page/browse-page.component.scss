@@ -14,9 +14,12 @@
         padding: 7px 32px;
     }
     position: sticky;
-    top:50px;
+    z-index: 10;
+    top:48px;
     left:0;
     min-height: 30px;
+    background-color: white;
+    padding: 3px 0px;
     white-space: nowrap;
     overflow: auto;
     -ms-overflow-style: none;  /* IE and Edge */
@@ -36,4 +39,8 @@ app-card{
     display: flex;
     justify-content: space-between;
     padding:5%;
+}
+.wrapper{
+    width: 100%;
+    margin: 15% auto;
 }

@@ -39,6 +39,68 @@ export class BrowsePageComponent implements OnInit {
       frontImage: 'https://source.unsplash.com/random/300x400',
       backImage: 'https://source.unsplash.com/random/300x400'
     }
+  },{
+    title: 'Title of the design #1',
+    color: 'BLACK',
+    type: 'frontOnly',
+    images:{
+      frontImage:'https://source.unsplash.com/random/300x400'
+    }
+  },{
+    title: 'Title of the design #2',
+    color: 'WHITE',
+    type: 'backOnly',
+    images:{
+      backImage : 'https://source.unsplash.com/random/300x400'
+    }
+    
+  },{
+    title: 'Title of the design',
+    color: 'NAVY',
+    type: 'frontPriority',
+    images : {
+      frontImage: 'https://source.unsplash.com/random/300x400',
+      backImage: 'https://source.unsplash.com/random/300x400'
+    }
+  },{
+    title: 'Title of the design',
+    color: 'WHITE',
+    type: 'backPriority',
+    images : {
+      frontImage: 'https://source.unsplash.com/random/300x400',
+      backImage: 'https://source.unsplash.com/random/300x400'
+    }
+  },{
+    title: 'Title of the design #1',
+    color: 'BLACK',
+    type: 'frontOnly',
+    images:{
+      frontImage:'https://source.unsplash.com/random/300x400'
+    }
+  },{
+    title: 'Title of the design #2',
+    color: 'WHITE',
+    type: 'backOnly',
+    images:{
+      backImage : 'https://source.unsplash.com/random/300x400'
+    }
+    
+  },{
+    title: 'Title of the design',
+    color: 'NAVY',
+    type: 'frontPriority',
+    images : {
+      frontImage: 'https://source.unsplash.com/random/300x400',
+      backImage: 'https://source.unsplash.com/random/300x400'
+    }
+  },{
+    title: 'Title of the design',
+    color: 'WHITE',
+    type: 'backPriority',
+    images : {
+      frontImage: 'https://source.unsplash.com/random/300x400',
+      backImage: 'https://source.unsplash.com/random/300x400'
+    }
   },
 ]
   constructor() { }

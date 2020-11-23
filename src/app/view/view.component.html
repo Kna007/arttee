@@ -1,6 +1,4 @@
-
 <div class="wrapper">
-
     <div class="title">
         <div class="artistNameDesignTitleHolder">
             <div class="artistName">
@@ -10,9 +8,9 @@
                 Design's Title
             </div>
         </div>
-       <div class="price">
-           $11.99
-       </div>
+        <div class="price">
+            $11.99
+        </div>
     </div>
     <div class="mainPreview">
         <div class="front">
@@ -24,8 +22,9 @@
             <img class="designImg" src="{{card.images.backImage}}" alt="">
         </div>
     </div>
-    <div class="colorPreviewHolder" >
-        <div class="colorPreview" *ngFor="let color of ['BLACK', 'WHITE', 'NAVY', 'BLACK']" (click)="selectColor(color)" [class.active]="selectedColor == color">
+    <div class="colorPreviewHolder">
+        <div class="colorPreview" *ngFor="let color of ['BLACK', 'WHITE', 'NAVY', 'BLACK']" (click)="selectColor(color)"
+            [class.active]="selectedColor == color">
             <div class="frontPriority" *ngIf="card.type == 'frontPriority' || card.type == 'frontOnly'">
                 <div class="back">
                     <img class="blank" src="assets/{{color}}-BACK.png" alt="">
@@ -51,20 +50,21 @@
     <div class="sizeOptionTitleHolder">
         <div class="titleSizeGuideHolder">
             <h4 class="titleSize">
-                Select Size 
-             </h4>
-             <h4 class="sizeGuide">
+                Select Size
+            </h4>
+            <h4 class="sizeGuide">
                 Size Guide
-             </h4>
+            </h4>
         </div>
         <div class="sizeOptionHolder">
-            <div class="sizeOption" *ngFor="let size of ['S','M','L','XL']" [class.active]='selectedSize == size' (click)="selectSize(size)">
+            <div class="sizeOption" *ngFor="let size of ['S','M','L','XL']" [class.active]='selectedSize == size'
+                (click)="selectSize(size)">
                 <span>{{size}}</span>
             </div>
         </div>
     </div>
     <div class="ctaHolder">
-        <button class="cta addToBag"> Add To Bag </button>
+        <button class="cta addToBag" (click)="addToBag()"> Add To Bag </button>
         <button class="cta favourite"> Favourite <img src="/assets/heart.svg" alt=""> </button>
     </div>
     <div class="descriptionHolder">
@@ -94,8 +94,54 @@
     <div class="recommendDesignHolder">
         <h4>YOU MIGHT ALSO LIKE</h4>
         <div class="cardHolder">
-            <app-card *ngFor="let recommendCard of recommendCards" [card]="recommendCard"  routerLink="/view/a"></app-card>
+            <app-card *ngFor="let recommendCard of recommendCards" [card]="recommendCard" routerLink="/view/a">
+            </app-card>
         </div>
     </div>
 </div>
+<div class="askToCheckoutHolder" *ngIf="isAddToBagClicked">
+    <div class="askToCheckout">
+        <div class="successAlert">
+            <img src="/assets/checkmark-circle-outline.svg" alt="">
+            <span>Succesfully Added To The Bag</span>
+        </div>
+        <div class="previewInformationHolder">
+            <div class="previewHolder">
+                <div class="frontPriority" *ngIf="card.type == 'frontPriority' || card.type == 'frontOnly'">
+                    <div class="back">
+                        <img class="blank" src="assets/{{card.color}}-BACK.png" alt="">
+                        <img class="designImg" src="{{images.backImage}}" alt="">
+                    </div>
+                    <div class="front">
+                        <img class="blank" src="assets/{{card.color}}-FRONT.png" alt="">
+                        <img class="designImg" src="{{card.images.frontImage}}" alt="">
+                    </div>
+                </div>
+                <div class="backPriority" *ngIf="card.type == 'backPriority' || card.type == 'backOnly'">
+                    <div class="front">
+                        <img class="blank" src="assets/{{card.color}}-FRONT.png" alt="">
+                        <img class="designImg" src="{{card.images.frontImage}}" alt="">
+                    </div>
+                    <div class="back">
+                        <img class="blank" src="assets/{{card.color}}-BACK.png" alt="">
+                        <img class="designImg" src="{{card.images.backImage}}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="informationHolder">
+                <div class="designerPriceHolder">
+                    <span>Artist Helvetica</span>
+                    <span>$10.95</span>
+                </div>
+                <h4>FUTURA MERCH</h4>
+                <div>Size M</div>
+                <div>Color Navy Blue</div>
+            </div>
+        </div>
+        <div class="buttonHolder">
+            <button class="viewBagButton" (click)="viewBag()">View Bag</button>
+            <button class="continueShoppingButton" (click)="continueShopping()">Continue Shopping</button>
+        </div>
 
+    </div>
+</div>

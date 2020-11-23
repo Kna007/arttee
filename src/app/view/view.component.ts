@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CardComponent } from '../reusable/card/card.component';
 
 @Component({
@@ -8,7 +9,8 @@ import { CardComponent } from '../reusable/card/card.component';
 })
 export class ViewComponent implements OnInit {
   
-  constructor() { }
+  constructor(private router: Router) { }
+  isAddToBagClicked = false;
   card = {
     title: 'Title of the design',
     color: 'WHITE',
@@ -64,5 +66,17 @@ export class ViewComponent implements OnInit {
   }
   selectSize(size){
     this.selectedSize = size;
+  }
+  addToBag(){
+    this.isAddToBagClicked = true;
+    document.body.style.overflow = 'hidden';
+  }
+  viewBag(){
+    document.body.style.overflow = 'auto';
+    this.router.navigate(['/bag']);
+  }
+  continueShopping(){
+    this.isAddToBagClicked = false;
+    document.body.style.overflow = 'auto';
   }
 }

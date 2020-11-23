@@ -15,7 +15,7 @@ h5{
         width: 45%;
         margin-left: 5%;
         position: relative;
-        z-index:5;
+        z-index:1;
         .blank{
             width: 100%;
             filter: drop-shadow(4px 2px 3px rgba(0,0,0,0.6));
@@ -103,7 +103,7 @@ div{
             width: 70%;
             margin-left: 20%;
             position: relative;
-            z-index:5;
+            z-index:1;
             .blank{
                 width: 100%;
                 filter: drop-shadow(4px 2px 3px rgba(0,0,0,0.6));
@@ -138,7 +138,7 @@ div{
             width: 70%;
             margin-left: 20%;
             position: relative;
-            z-index:5;
+            z-index:1;
             .blank{
                 width: 100%;
                 filter: drop-shadow(4px 2px 3px rgba(0,0,0,0.6));
@@ -198,7 +198,8 @@ div{
 
 .wrapper{
     width: 95%;
-    margin: 0 2.5%;
+    margin: 15% 2.5%;
+    
 }
 .cta{
     width: 100%;
@@ -295,4 +296,161 @@ app-card{
     margin-right: 10px;
     display: inline-block;
     width:210px;
+}
+.askToCheckoutHolder{
+    position: fixed;
+    z-index: 3;
+    top:5%;
+    right:0;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    .askToCheckout{
+        background-color: white;
+        width: 100%;
+        padding: 5%;
+        .successAlert{
+            height: 14px;
+            display:block;
+            img{
+                height: 100%;
+                fill:var(--primary);
+                vertical-align: middle;
+                margin-right: 5px;
+            }
+            span{
+                vertical-align: middle;
+                font-weight: bold;
+                font-size: 14px;
+                font-family: 'Helvetica Neue';
+            }
+        }
+        .previewInformationHolder{
+            display:flex;
+            margin-top:30px;
+            .previewHolder{
+                
+                border: 2px solid var(--primary);
+                width:30%;
+                background-color: lightgray;
+                position:relative;
+            }
+            .informationHolder{
+                width:65%;
+                margin-left: 10px;
+                .designerPriceHolder{
+                    display: flex;
+                    justify-content:space-between;
+                    span:first-child{
+                        font-size:10px;
+                    }
+                    span{
+                        font-size: 14px;
+                    }
+                }
+                h4,div{
+                    display:block;
+                    margin-bottom: 5px;
+                }
+                div{
+                    font-size: 10px;
+                }
+            }
+        }
+        .buttonHolder{
+            width: 100%;
+            margin-top:10px;
+            button{
+                width: 47.5%;
+                height: 30px;
+                border:none;
+                vertical-align: top;
+            }
+            .viewBagButton{
+                color:white;
+                font-weight: bold;
+                font-size:16px;
+                background-color: var(--primary );
+            }
+            .continueShoppingButton{
+                border: 1px solid lightgrey;
+                background:none;
+                margin-left: 2.5%;
+            }
+        }
+    }
+
+
+}
+.frontPriority{
+    width: 100%;
+    padding: 5% 0px;
+    .back{
+        width: 60%;
+        left:2.5%;
+        position: absolute;
+        filter: opacity(0.9);
+        .blank{
+            width: 100%;
+        }
+        .designImg{
+            width: 50%;
+            top:20%;
+            left:25%;
+            position: absolute;
+        }
+    }
+    .front{
+        width: 70%;
+        margin-left: 20%;
+        position: relative;
+        z-index:1;
+        .blank{
+            width: 100%;
+            filter: drop-shadow(4px 2px 3px rgba(0,0,0,0.6));
+        }
+        .designImg{
+            width: 50%;
+            top:20%;
+            left:25%;
+            position: absolute;
+        }
+    }
+}
+.backPriority{
+    width: 100%;
+    padding: 5% 0px;
+    .front{
+        width: 60%;
+        left:2.5%;
+        position: absolute;
+        filter: opacity(0.9);
+        .blank{
+            width: 100%;
+        }
+        .designImg{
+            width: 50%;
+            top:20%;
+            left:25%;
+            position: absolute;
+        }
+    }
+    .back{
+        width: 70%;
+        margin-left: 20%;
+        position: relative;
+        z-index:1;
+        .blank{
+            width: 100%;
+            filter: drop-shadow(4px 2px 3px rgba(0,0,0,0.6));
+        }
+        .designImg{
+            width: 50%;
+            top:20%;
+            left:25%;
+            position: absolute;
+        }
+    }
 }

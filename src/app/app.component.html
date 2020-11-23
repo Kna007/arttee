@@ -1,15 +1,16 @@
 <!-- Header -->
 
 <div class="header" >
-  <div class="logo" routerLink="/">
-    <img src="../assets/logo07.png" alt="">
+  <div class="logo" routerLink="/home">
+    <img src="../assets/logo2.svg" alt="">
   </div>
   <div class="icon-holder">
     <div class="icon" (click)="openSearch()">
       <img src="../assets/search.svg" alt="">
     </div>
-    <div class="icon" routerLink="/bag" >
+    <div class="icon bag" routerLink="/bag" >
       <img src="../assets/bag.svg" alt="">
+      <div class="amount">4</div>
     </div>
     <div class="icon">
       <img src="../assets/heart.svg" alt="">
@@ -20,7 +21,6 @@
       <div class="line"></div>
     </div>
   </div>
-
 </div>
 
 <div class="searchPage" [class.searchOpen]="searchOpen">
@@ -48,9 +48,10 @@
       Among Us
     </h4>
   </div>
+  
 </div>
-<div class="alert" >
-  <strong>FREE DELIVERY!</strong> on purchase more than 3 T-Shirts
-  <img src="/asset/cross.svg" alt="">
+<div class="alert" *ngIf="!closeAlert" >
+  <strong>FREE DELIVERY</strong> on purchase more than 3 T-Shirts
+  &nbsp; &nbsp;<img src="/assets/cross.png" alt="" (click)="closeAlert =true">
 </div>
 <router-outlet></router-outlet>

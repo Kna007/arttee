@@ -2,32 +2,32 @@
     <div class="designHolder">
         <div class="oneDesign" *ngIf="card.type == 'frontOnly' || card.type == 'backOnly'">
             <div class="tshirt" *ngIf="card.type == 'frontOnly'">
-                <img class="blank" src="assets/{{card.color}}-FRONT.png" alt="">
-                <img class="designImg" src="{{card.images.frontImage}}" alt="">
+                <img loading="lazy" class="blank" src="assets/{{card.color}}-FRONT.png" alt="">
+                <img loading="lazy" class="designImg" src="{{card.images.frontImage}}" alt="">
             </div>
             <div class="tshirt" *ngIf="card.type == 'backOnly'">
-                <img class="blank" src="assets/{{card.color}}-BACK.png" alt="">
-                <img class="designImg" src="{{card.images.backImage}}" alt="">
+                <img loading="lazy" class="blank" src="assets/{{card.color}}-BACK.png" alt="">
+                <img loading="lazy" class="designImg" src="{{card.images.backImage}}" alt="">
             </div>
         </div>
         <div class="frontPriority" *ngIf="card.type == 'frontPriority'">
             <div class="back">
-                <img class="blank" src="assets/{{card.color}}-BACK.png" alt="">
-                <img class="designImg" src="{{card.images.backImage}}" alt="">
+                <img loading="lazy" class="blank" src="assets/{{card.color}}-BACK.png" alt="">
+                <img loading="lazy" class="designImg" src="{{card.images.backImage}}" alt="">
             </div>
             <div class="front">
-                <img class="blank" src="assets/{{card.color}}-FRONT.png" alt="">
-                <img class="designImg" src="{{card.images.frontImage}}" alt="">
+                <img loading="lazy" class="blank" src="assets/{{card.color}}-FRONT.png" alt="">
+                <img loading="lazy" class="designImg" src="{{card.images.frontImage}}" alt="">
             </div>
         </div>
         <div class="backPriority" *ngIf="card.type == 'backPriority'">
             <div class="front">
-                <img class="blank" src="assets/{{card.color}}-FRONT.png" alt="">
-                <img class="designImg" src="{{card.images.frontImage}}" alt="">
+                <img loading="lazy" class="blank" src="assets/{{card.color}}-FRONT.png" alt="">
+                <img loading="lazy" class="designImg" src="{{card.images.frontImage}}" alt="">
             </div>
             <div class="back">
-                <img class="blank" src="assets/{{card.color}}-BACK.png" alt="">
-                <img class="designImg" src="{{card.images.backImage}}" alt="">
+                <img loading="lazy" class="blank" src="assets/{{card.color}}-BACK.png" alt="">
+                <img loading="lazy" class="designImg" src="{{card.images.backImage}}" alt="">
             </div>
         </div>
     </div>
