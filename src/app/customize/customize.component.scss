@@ -8,11 +8,10 @@
     display: flex;
     width:100%;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     .sideButtonHolder{
         width:30%;
         display: flex;
-
         .front, .back{
             width:39px;
             display:flex;
@@ -35,15 +34,20 @@
     }
     .colorSelectionHolder{
         width: 120px;
-        
-        .colorMainPicker{
+        position: relative;
+        .colorMainPicker, .colorOption{
             display:flex;
+            justify-content: space-between;
             align-items: center;
+            
+        }
+        .colorMainPicker{
+            border: 2px solid lightgray;
             .colorText::after {
                 display: inline-block;
                 position: relative;
                 content: "";
-                top: -4px;
+                top: -2px;
                 right: 0;
                 margin-left: 4px;
                 width: 6px;
@@ -51,7 +55,18 @@
                 transform: rotate(45deg);
                 border-right: 2px solid rgba(0,0,0,1);
                 border-bottom: 2px solid rgba(0,0,0,1);
+
               }
+              
+        }
+        .colorMainPicker,.optionHolder{
+            padding:3px 10px;
+        }
+        .optionHolder{
+            background-color: lightgray;
+            position: absolute;
+            z-index: 2;
+            width: 100%;
         }
         .circle{
             width:30px;
@@ -60,13 +75,40 @@
             background-color: white;
             border: 1px solid lightgray
         }
+        .BLACK{
+            background-color: black;
+        }
+        .WHITE{
+            background-color: white;
+        }
+        .NAVY{
+            background-color: navy;
+        }
+        .GREY{
+            background-color: grey;
+        }
         .colorText{
-            margin-left: 5px;
-            font-weight: bold;
+            align-self: center;
+            font-size:10px;
+            font-weight: 300;
         }
         .colorOption{
             display: flex;
             align-items: center;
+            margin-top:5px;
         }
+    }
+
+}
+.canvasContainer{
+    position: relative;
+    width:100%;
+    .shirtLayer{
+        
+    }
+    .designLayer{
+        position: absolute;
+        top:0px;
+        left:0px;
     }
 }

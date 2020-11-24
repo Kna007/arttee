@@ -11,16 +11,20 @@
             </div>
         </div>
         <div class="colorSelectionHolder">
-            <div class="colorMainPicker">
-                <div class="circle"></div>
-                <div class="colorText">White &nbsp;</div>
+            <div class="colorMainPicker" (click)="dropdownClicked = !dropdownClicked">
+                <div class="circle" [ngClass]="selectedColor"></div>
+                <div class="colorText">{{selectedColor}} &nbsp;</div>
             </div>
-            <div class="optionHolder">
-                <div class="colorOption">
-                    <div class="circle"></div>
-                    <div class="colorText">Black</div>
+            <div class="optionHolder" *ngIf="dropdownClicked">
+                <div class="colorOption" *ngFor="let color of ['BLACK','WHITE','NAVY','GREY']" (click)="selectedColor = color;dropdownClicked=false">
+                    <div class="circle" [ngClass]="color"></div>
+                    <div class="colorText" >{{color}}</div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="canvasContainer">
+        <canvas class="shirtLayer" #shirtLayer  ></canvas>
+        <canvas class="designLayer"  width="100%" ></canvas>
     </div>
 </div>
